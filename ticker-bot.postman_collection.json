@@ -1,0 +1,134 @@
+{
+	"info": {
+		"_postman_id": "91ba4c8e-f2cf-413f-9c54-87ebe3e3512e",
+		"name": "ticker-bot",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create ticker",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"supa-foundation\",  \n  \"crypto\": true,  \n  \"ticker\": \"1) SUPA\", \n  \"color\": true,\n  \"decorator\": \"@\",\n  \"nickname\": true,  \n  \"frequency\": 10,\n  \"discord_bot_token\": \"OTMzMzgzMzg5NTk4MzQ3MzQ1.YegvBQ.TDZsEVjHGaQYRVee6ixvFVmyVII\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "0.0.0.0:8080/ticker",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8080",
+					"path": [
+						"ticker"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Tickers",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "0.0.0.0:8080/ticker/",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8080",
+					"path": [
+						"ticker",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Ticker",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "0.0.0.0:8080/ticker/supa-usd",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8080",
+					"path": [
+						"ticker",
+						"supa-usd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create tickerboard",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Price Bots\",\n  \"crypto\": true,\n  \"items\": [\"supa-foundation\", \"bitcoin\"],\n  \"color\": true,\n  \"arrows\": true,\n  \"nickname\": true,\n  \"frequency\": 10,\n  \"discord_bot_token\": \"OTMzMzgzMzg5NTk4MzQ3MzQ1.YegvBQ.TDZsEVjHGaQYRVee6ixvFVmyVII\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "0.0.0.0:8080/tickerboard",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8080",
+					"path": [
+						"tickerboard"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
