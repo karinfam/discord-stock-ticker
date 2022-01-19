@@ -1,0 +1,11 @@
+---
+version: "3.9.6"
+services:
+  discordstockticker:
+    image: ghcr.io/rssnyder/discord-stock-ticker:3.9.6
+    environment:
+      - FREQUENCY=60 # How often to update all tickers, in seconds
+      - LOGLEVEL=1 # 0=production builds. 1=dev builds. Set to 1 if you are debugging/troubleshooting
+      - DB=/state/bots.db # where to store your bots (a non existing file within the container) to have them persist on restarts
+    ports:
+      - "8080:8080" # The first number is the port you want to use for your API
